@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LumiShop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="../img/LumiShop/logo.png">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffe4e1;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        header {
+            background-color: #ff69b4;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70px;
+            width: 100%;
+        }
+        .navbar {
+            background-color: #ff1493;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            font-size: 18px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff1493 !important;
+        }
+        h2 {
+            color: #ff1493;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .btn-primary {
+            background-color: #ff69b4;
+            border-color: #ff69b4;
+        }
+        .btn-primary:hover {
+            background-color: #ff1493;
+            border-color: #ff1493;
+        }
+        .form-control {
+            border-radius: 5px;
+        }
+        .text-primary {
+            color: #ff69b4 !important;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128c7e;
+        }
+
+        .whatsapp-button i {
+            font-size: 24px;
+        }
+    </style> -->
+</head>
+<body class="bg-light">
+
+<header id="header">
+    <h1>LumiShop</h1>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../html/index.html">LumiShop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../html/index.html">Inicio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="row justify-content-center" id="registerContainer">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Registro</h2>
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre completo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="Crea una contraseña" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirma tu contraseña" required>
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <p>¿Ya tienes una cuenta? <a href="#loginContainer" id="toggleLogin" class="text-primary">Inicia Sesión aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5 d-none" id="loginContainer">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Iniciar Sesión</h2>
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Ingresa tu correo electrónico" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Ingresa tu contraseña" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userType" class="form-label">Selecciona tu tipo de cuenta</label>
+                            <select class="form-select" id="userType" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="cliente">Cliente</option>
+                                <option value="proveedor">Proveedor</option>
+                                <option value="trabajador">Trabajador</option>
+                            </select>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">
+                                    Recuérdame
+                                </label>
+                            </div>
+                            <a href="#" class="text-primary">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <p>¿No tienes una cuenta? <a href="#registerContainer" id="toggleRegister" class="text-primary">Regístrate aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nuestra Ubicacion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31225.240305204705!2d-77.00076304158702!3d-11.963765700432422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c50be6f64969%3A0xbc68bf6592061291!2sVega%20Market%20Montenegro!5e0!3m2!1ses-419!2spe!4v1725412332469!5m2!1ses-419!2spe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <a href="https://maps.app.goo.gl/j8448HjcT1ix3sfg7" class="btn btn-primary">Ir al Mapa</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="https://wa.me/997260445" class="whatsapp-button" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- FOOTER  -->
+<footer class="py-5 bg-dark text-white mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-2 mb-3">
+                <h5>Comunicate con nosotros</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2 d-flex align-items-center">
+                      <i class="fab fa-whatsapp me-2" style="color: green; font-size: 24px;"></i>
+                      <div>
+                          <b><a href="https://wa.me/997260445" class="nav-link p-0" style="font-size: 14px;">Asistente de WhatsApp</a></b>
+                          <span>Te atenderá 24h</span>
+                      </div>
+                  </li>
+                  
+                  <li class="nav-item mb-2 d-flex align-items-center">
+                    <i class="fas fa-envelope me-2" style="color: lightblue; font-size: 24px;"></i>
+                    <div>
+                        <b>Escríbenos</b>
+                        <br>
+                        <span>Estamos para ayudarte</span>
+                        <br>
+                        <a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=ee272b19-4411-433f-8f28-5c13cb6fd407&redirect_uri=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc&response_type=code%20id_token&scope=openid%20profile%20offline_access&response_mode=form_post&nonce=638610089162149612.MjEzYzlmMDctMzQ3Yy00YzQxLTliN2QtNTdlNDg0MWRlNjg5N2U1ZDE5YjktNDgzMC00MjliLTlmNDQtZmE5ZjJkOTk4MmZj&nopa=2&state=CfDJ8LWN6nmb9HBGpcIJvpEgkL0-8hlKoj0LpM8tv55kqF26JQdiVzjh1pNvYeI_VYH0KrLVueioltzbwfRIJlnqO_XimzMqHV-RZfXIIw-N8qP5VRK94pvJCHtSFrX5yEXmzsYm7cQMI4Ykp7FxWoFgyt-SKH-vrwLI8dNp7JEubZ4Q-P-GjsOXXN8lJcxbRbI5emdhoXAee5IfK4m1AfTHzRXRo5lF6zEn23JlkMC4WHDeIfUyPYz_nDGwusJCKJdItvywDScBt_tYmy9ObJ3lG58S4PzutgmWliN3sSj7JWWIDipDtT8YEwKQmxEHok2itVUuItT9y0oelDI_HgMIphmfZTLKDTd1jrpiAlwA607mPHN_fv8VgnZGNIn2A3hyMHfHczb8pf1Q9gehXrxaht9EXC0UqpY_xPS4S0bq-03tiG8ijCGOFvwiGHKxy1n51A&x-client-SKU=ID_NET6_0&x-client-ver=7.6.0.0" class="nav-link p-0" style="font-size: 14px;">U22235461@utp.edu.pe</a>
+                    </div>
+                </li>
+
+                <li class="nav-item mb-2 d-flex align-items-center">
+                    <i class="fas fa-phone me-2" style="color: rgb(156, 222, 235); font-size: 24px;"></i>
+                    <div>
+                        <b>Llámanos</b>
+                        <br>
+                        <span>Contactanos a nuestro servicio de cliente al 
+                        <a href="tel:997260445" class="nav-link p-0" style="font-size: 14px;">997-260-445</a></span>
+                    </div>
+                </li>
+
+                <li class="nav-item mb-2 d-flex align-items-center">
+                    <i class="fas fa-map-marker-alt me-3" style="color: #de2222; font-size: 24px;"></i>
+                    <div>
+                        <b><a href="" class="nav-link p-0" style="font-size: 14px;" data-bs-toggle="modal" data-bs-target="#exampleModal3">Visitanos</a></b>
+                        <span>Estamos contigo</span>
+                    </div>
+                </li>
+                </ul>
+            </div>
+      
+            
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Nosotros</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="../html/conocenos.html" class="nav-link p-0">Conocenos</a></li>
+                <li class="nav-item mb-2"><a href="../html/conocenos.html" class="nav-link p-0 ">Trabaja con nosotros</a></li>
+                <li class="nav-item mb-2"><a href="../html/conocenos.html" class="nav-link p-0 ">Responsabilidad social</a></li>
+                <li class="nav-item mb-2"><a href="../html/conocenos.html" class="nav-link p-0 ">Terminos y condiciones</a></li>
+                <li class="nav-item mb-2">
+                    <div>
+                        <b>Libro de Reclamaciones</b>
+                        <a href="../html/libroReclamaciones.html" class="nav-link p-0 text-body-secondary">
+                            <img src="../img/LumiShop/libroReclamaciones.png" alt="Libro de Reclamaciones" style="width: 125px; height: 100px;">
+                        </a>
+                    </div>
+                </li>                
+              </ul>
+            </div>
+      
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Ofrecemos</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="../html/productos.html" class="nav-link p-0 ">Productos</a></li>
+                <li class="nav-item mb-2"><a href="../html/productos.html" class="nav-link p-0 ">Productos Destacados</a></li>
+                <li class="nav-item mb-2"><a href="../html/ofertas.html" class="nav-link p-0 ">Ofertas</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">LSHOP puntos</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-md-5 offset-md-1 mb-3">
+              <form>
+                <h5>Registrarse con nosotros</h5>
+                <p>Recibe todas las novedades de nuestros productos</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <label for="newsletter1" class="visually-hidden">Correo electronico</label>
+                  <input id="newsletter1" type="text" class="form-control" placeholder="Correo electronico" data-listener-added_21a9e0ed="true">
+                  <button class="btn btn-primary" type="button"  onclick="window.location.href='login.html'">Registrarse</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top">
+            <p class="text-center">© 2024 LumiShop. Todos los derechos reservados.</p>
+        </div>
+        
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../JavaScript/login.js"></script>
+
+</body>
+</html>

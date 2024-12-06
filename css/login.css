@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    background-color: #ffe4e1 !important;
+    color: #333 !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: #ff69b4;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    height: 70px;
+   top: 0;
+    width: 100%;
+}
+.navbar {
+    background-color: #ff1493 !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important; 
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+    font-size: 18px !important;
+}
+
+.row .nav-link{
+    font-size: 14px !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff69b4 !important;
+}
+
+.nav-link:hover {
+    color: #ff69b4 !important;
+}
+h2 {
+    color: #ff1493 !important;
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    font-weight: bold !important;
+}
+.btn.btn-primary {
+    background-color: #ff69b4 !important;
+    border-color: #ff69b4!important;
+}
+
+.btn.btn-primary:hover {
+    background-color: #ff1493!important;
+    border-color: #ff1493!important;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+    padding: 30px;
+}
+.form-control {
+    border-radius: 5px;
+}
+.text-primary {
+    color: #ff69b4 !important;
+}
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
+}
+
+.whatsapp-button i {
+    font-size: 24px;
+}

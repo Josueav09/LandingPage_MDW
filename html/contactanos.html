@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con Nosotros - LumiShop</title>
+    <link rel="shortcut icon" type="x-icon" href="../img/LumiShop/logo.png">
+    <link rel="stylesheet" href="../css/contactanos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- <style>
+         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffe4e1;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        header {
+            background-color: #ff69b4;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15%;
+            height: 70px;
+            top: 0;
+           
+            width: 100%;
+        }
+        .navbar {
+            background-color: #ff1493;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            font-size: 18px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff69b4 !important;
+        }
+        h2 {
+            color: #ff1493;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+        
+        .nav-link:hover{
+            color: #ff69b4 !important;
+        }
+        .btn-primary {
+            background-color: #ff69b4;
+            border-color: #ff69b4;
+        }
+        .btn-primary:hover {
+            background-color: #ff1493;
+            border-color: #ff1493;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128c7e;
+        }
+
+        .whatsapp-button i {
+            font-size: 24px;
+        }
+
+    </style> -->
+</head>
+<body>
+    
+<header id="header">
+    <h1>LumiShop</h1>
+
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../html/index.html">LumiShop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../html/index.html">Inicio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container mt-5 ">
+    <h2 class="mb-4">Formulario de Registro para Proveedores</h2>
+    <form>
+        <!-- Información General del Proveedor -->
+        <h5>Información General del Proveedor</h5>
+        <div class="mb-3">
+            <label for="companyName" class="form-label">Nombre de la Empresa</label>
+            <input type="text" class="form-control" id="companyName" required>
+        </div>
+        <div class="mb-3">
+            <label for="businessName" class="form-label">Razón Social</label>
+            <input type="text" class="form-control" id="businessName" required>
+        </div>
+        <div class="mb-3">
+            <label for="companyType" class="form-label">Tipo de Empresa</label>
+            <select class="form-select" id="companyType" required>
+                <option selected disabled value="">Seleccione...</option>
+                <option value="SA">SA</option>
+                <option value="SRL">SRL</option>
+                <option value="Persona Natural">Persona Natural</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="taxId" class="form-label">Número de Identificación Fiscal (NIF/RUC)</label>
+            <input type="text" class="form-control" id="taxId" required>
+        </div>
+        <div class="mb-3">
+            <label for="foundationDate" class="form-label">Fecha de Fundación</label>
+            <input type="date" class="form-control" id="foundationDate" required>
+        </div>
+        <div class="mb-3">
+            <label for="industrySector" class="form-label">Sector Industrial</label>
+            <input type="text" class="form-control" id="industrySector" required>
+        </div>
+
+        <!-- Datos de Contacto -->
+        <h5>Datos de Contacto</h5>
+        <div class="mb-3">
+            <label for="contactName" class="form-label">Nombre del Contacto Principal</label>
+            <input type="text" class="form-control" id="contactName" required>
+        </div>
+        <div class="mb-3">
+            <label for="contactPosition" class="form-label">Cargo del Contacto Principal</label>
+            <input type="text" class="form-control" id="contactPosition" required>
+        </div>
+        <div class="mb-3">
+            <label for="contactPhone" class="form-label">Teléfono de Contacto</label>
+            <input type="tel" class="form-control" id="contactPhone" required>
+        </div>
+        <div class="mb-3">
+            <label for="contactEmail" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="contactEmail" required>
+        </div>
+        <div class="mb-3">
+            <label for="website" class="form-label">Sitio Web</label>
+            <input type="url" class="form-control" id="website">
+        </div>
+
+        <!-- Información de Dirección -->
+        <h5>Información de Dirección</h5>
+        <div class="mb-3">
+            <label for="address" class="form-label">Dirección Comercial</label>
+            <input type="text" class="form-control" id="address" required>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="country" class="form-label">País/Región</label>
+                <input type="text" class="form-control" id="country" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="city" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="city" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="postalCode" class="form-label">Código Postal</label>
+            <input type="text" class="form-control" id="postalCode" required>
+        </div>
+
+        <!-- Detalles de Productos/Servicios Ofrecidos -->
+        <h5>Detalles de Productos Ofrecidos</h5>
+        <div class="mb-3">
+            <label for="products" class="form-label">Descripción de Productos</label>
+            <textarea class="form-control" id="products" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="categories" class="form-label">Categorías de Productos</label>
+            <input type="text" class="form-control" id="categories" required>
+        </div>
+        <div class="mb-3">
+            <label for="capacity" class="form-label">Capacidad de Producción</label>
+            <input type="text" class="form-control" id="capacity">
+        </div>
+
+        <!-- Información Financiera -->
+        <h5>Información Financiera</h5>
+        <div class="mb-3">
+            <label for="currency" class="form-label">Moneda Principal de Facturación</label>
+            <select class="form-select" id="currency" required>
+                <option selected disabled value="">Seleccione...</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="MXN">MXN</option>
+                <!-- Agrega otras monedas según sea necesario -->
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="paymentTerms" class="form-label">Plazos de Pago Ofrecidos</label>
+            <input type="text" class="form-control" id="paymentTerms" required>
+        </div>
+        <div class="mb-3">
+            <label for="bankDetails" class="form-label">Detalles Bancarios</label>
+            <textarea class="form-control" id="bankDetails" rows="3" required></textarea>
+        </div>
+
+        <!-- Documentación Legal -->
+        <h5>Documentación Legal</h5>
+        <div class="mb-3">
+            <label for="certifications" class="form-label">Certificados de Calidad</label>
+            <input type="file" class="form-control" id="certifications">
+        </div>
+        <div class="mb-3">
+            <label for="licenses" class="form-label">Licencias Operativas</label>
+            <input type="file" class="form-control" id="licenses">
+        </div>
+        <div class="mb-3">
+            <label for="contracts" class="form-label">Contratos o Acuerdos</label>
+            <input type="file" class="form-control" id="contracts">
+        </div>
+
+        <!-- Referencias Comerciales -->
+        <h5>Referencias Comerciales</h5>
+        <div class="mb-3">
+            <label for="clients" class="form-label">Clientes Principales</label>
+            <textarea class="form-control" id="clients" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="references" class="form-label">Referencias</label>
+            <textarea class="form-control" id="references" rows="3"></textarea>
+        </div>
+
+        <!-- Cumplimiento y Responsabilidad Social -->
+        <h5>Cumplimiento y Responsabilidad Social</h5>
+        <div class="mb-3">
+            <label for="socialPolicies" class="form-label">Políticas de Responsabilidad Social</label>
+            <textarea class="form-control" id="socialPolicies" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="complianceCertifications" class="form-label">Certificaciones de Cumplimiento</label>
+            <input type="file" class="form-control" id="complianceCertifications">
+        </div>
+
+        <!-- Aceptación y Consentimiento -->
+        <h5>Aceptación y Consentimiento</h5>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="terms" required>
+            <label class="form-check-label" for="terms">
+                Acepto los términos y condiciones
+            </label>
+        </div>
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="dataConsent" required>
+            <label class="form-check-label" for="dataConsent">
+                Autorizo el tratamiento de mis datos
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nuestra Ubicacion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31225.240305204705!2d-77.00076304158702!3d-11.963765700432422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c50be6f64969%3A0xbc68bf6592061291!2sVega%20Market%20Montenegro!5e0!3m2!1ses-419!2spe!4v1725412332469!5m2!1ses-419!2spe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <a href="https://maps.app.goo.gl/j8448HjcT1ix3sfg7" class="btn btn-primary">Ir al Mapa</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="https://wa.me/997260445" class="whatsapp-button" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Comunicate con nosotros</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2 d-flex align-items-center">
+                          <i class="fab fa-whatsapp me-2" style="color: green; font-size: 24px;"></i>
+                          <div>
+                              <b><a href="https://wa.me/997260445" class="nav-link p-0" style="font-size: 14px;">Asistente de WhatsApp</a></b>
+                              <span>Te atenderá 24h</span>
+                          </div>
+                      </li>
+                      
+                      <li class="nav-item mb-2 d-flex align-items-center">
+                        <i class="fas fa-envelope me-2" style="color: lightblue; font-size: 24px;"></i>
+                        <div>
+                            <b>Escríbenos</b>
+                            <br>
+                            <span>Estamos para ayudarte</span>
+                            <br>
+                            <a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=ee272b19-4411-433f-8f28-5c13cb6fd407&redirect_uri=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc&response_type=code%20id_token&scope=openid%20profile%20offline_access&response_mode=form_post&nonce=638610089162149612.MjEzYzlmMDctMzQ3Yy00YzQxLTliN2QtNTdlNDg0MWRlNjg5N2U1ZDE5YjktNDgzMC00MjliLTlmNDQtZmE5ZjJkOTk4MmZj&nopa=2&state=CfDJ8LWN6nmb9HBGpcIJvpEgkL0-8hlKoj0LpM8tv55kqF26JQdiVzjh1pNvYeI_VYH0KrLVueioltzbwfRIJlnqO_XimzMqHV-RZfXIIw-N8qP5VRK94pvJCHtSFrX5yEXmzsYm7cQMI4Ykp7FxWoFgyt-SKH-vrwLI8dNp7JEubZ4Q-P-GjsOXXN8lJcxbRbI5emdhoXAee5IfK4m1AfTHzRXRo5lF6zEn23JlkMC4WHDeIfUyPYz_nDGwusJCKJdItvywDScBt_tYmy9ObJ3lG58S4PzutgmWliN3sSj7JWWIDipDtT8YEwKQmxEHok2itVUuItT9y0oelDI_HgMIphmfZTLKDTd1jrpiAlwA607mPHN_fv8VgnZGNIn2A3hyMHfHczb8pf1Q9gehXrxaht9EXC0UqpY_xPS4S0bq-03tiG8ijCGOFvwiGHKxy1n51A&x-client-SKU=ID_NET6_0&x-client-ver=7.6.0.0" class="nav-link p-0" style="font-size: 14px;">U22235461@utp.edu.pe</a>
+                        </div>
+                    </li>
+    
+                    <li class="nav-item mb-2 d-flex align-items-center">
+                        <i class="fas fa-phone me-2" style="color: rgb(156, 222, 235); font-size: 24px;"></i>
+                        <div>
+                            <b>Llámanos</b>
+                            <br>
+                            <span>Contactanos a nuestro servicio de cliente al 
+                            <a href="tel:997260445" class="nav-link p-0" style="font-size: 14px;">997-260-445</a></span>
+                        </div>
+                    </li>
+    
+                    <li class="nav-item mb-2 d-flex align-items-center">
+                        <i class="fas fa-map-marker-alt me-3" style="color: #de2222; font-size: 24px;"></i>
+                        <div>
+                            <b><a href="" class="nav-link p-0" style="font-size: 14px;" data-bs-toggle="modal" data-bs-target="#exampleModal3">Visitanos</a></b>
+                            <span>Estamos contigo</span>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+          
+                
+                <div class="col-6 col-md-2 mb-3">
+                  <h5>Nosotros</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="../html/conocenos.html" class="nav-link p-0">Conocenos</a></li>
+                    <li class="nav-item mb-2"><a href="../html/conocenos.html" class="nav-link p-0 ">Trabaja con nosotros</a></li>
+                    <li class="nav-item mb-2"><a href="../html/conocenos.html" class="nav-link p-0 ">Responsabilidad social</a></li>
+                    <li class="nav-item mb-2"><a href="../html/conocenos.html" class="nav-link p-0 ">Terminos y condiciones</a></li>
+                    <li class="nav-item mb-2">
+                        <div>
+                            <b>Libro de Reclamaciones</b>
+                            <a href="../html/libroReclamaciones.html" class="nav-link p-0 text-body-secondary">
+                                <img src="../img/LumiShop/libroReclamaciones.png" alt="Libro de Reclamaciones" style="width: 125px; height: 100px;">
+                            </a>
+                        </div>
+                    </li>                
+                  </ul>
+                </div>
+          
+                <div class="col-6 col-md-2 mb-3">
+                  <h5>Ofrecemos</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="../html/productos.html" class="nav-link p-0 ">Productos</a></li>
+                    <li class="nav-item mb-2"><a href="../html/productos.html" class="nav-link p-0 ">Productos Destacados</a></li>
+                    <li class="nav-item mb-2"><a href="../html/ofertas.html" class="nav-link p-0 ">Ofertas</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">LSHOP puntos</a></li>
+                  </ul>
+                </div>
+          
+                <div class="col-md-5 offset-md-1 mb-3">
+                  <form>
+                    <h5>Registrarse con nosotros</h5>
+                    <p>Recibe todas las novedades de nuestros productos</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                      <label for="newsletter1" class="visually-hidden">Correo electronico</label>
+                      <input id="newsletter1" type="text" class="form-control" placeholder="Correo electronico" data-listener-added_21a9e0ed="true">
+                      <button class="btn btn-primary" type="button"  onclick="window.location.href='login.html'">Registrarse</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top">
+                <p class="text-center">© 2024 LumiShop. Todos los derechos reservados.</p>
+            </div>
+            
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
